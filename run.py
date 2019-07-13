@@ -31,7 +31,7 @@ for rect in rects:
 
     
     img = cv2.rectangle(img, (rect[0]-shift, rect[1]-shift), (rect[0] + rect[2]+shift, rect[1] + rect[3]+shift), (0, 255, 0), 1)
-    prediction = model.predict(pred_img.reshape(1,28,28,1))
+    prediction = model.predict(pred_img.reshape(-1,28,28,1))
     
     
 
